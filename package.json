@@ -1,0 +1,40 @@
+{
+  "name": "xst_google_events",
+  "version": "1.0.0",
+  "description": "xst_google_events, Compatible from IE10 and upper",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "superagent": "^3.8.2",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^3.11.0"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "css-loader": "^0.28.10",
+    "date-fns": "^1.29.0",
+    "envify": "^4.1.0",
+    "eslint-config-react-tools": "^1.1.2",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "moment": "^2.20.1",
+    "react-google-calendar-events-list": "^0.2.0",
+    "react-table": "^6.8.0",
+    "style-loader": "^0.19.1"
+  }
+}
