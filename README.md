@@ -1,5 +1,6 @@
 xst_google_events
 ===
+<img src="./xst_googleEvents.svg"  width="100%" height="144">
 
 xst_googleCalender fetch Calendar entries from Google Calender and output them to your Webpage.
 It's based on react and output an sortable Event-List Table.
