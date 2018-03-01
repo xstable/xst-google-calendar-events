@@ -7,11 +7,10 @@ xst_google_events
 [![GitHub Issues](https://img.shields.io/github/issues/xstable/xst_google_events.svg?style=for-the-badge)](https://github.com/xstable/xst_google_events/issues)
 
 
-xst_googleCalender fetch Calendar entries from Google Calender and output them to your Webpage.
-It's based on **[React](https://reactjs.org/)**, fetch the Data via AJAX and output an sortable Event-List Table.
-No Webserver with PHP or Database needed, still work in an simple HTML-File.
+__fetch Google Calendar Entries via API into an sortable Event-List-Table at your Website__
 
-You can use it at each Website, because it's plain HTML, JS and CSS.
+It's based on **[React](https://reactjs.org/)**, fetch the Data via AJAX and output an sortable Event-List Table.
+No Webserver with PHP or Database needed, because it's plain HTML, JS and CSS.
 
 
 ## Table of content
