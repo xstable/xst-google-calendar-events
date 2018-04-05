@@ -64,13 +64,15 @@ export function getEvents(callback) {
             if (!err) {
                 const events = [];
                 JSON.parse(resp.text).items.map((event) => {
-                    events.push({
-                        start: event.start.date || event.start.dateTime,
-                        end: event.end.date || event.end.dateTime,
-                        title: event.summary,
-                        location: extractGoogleCalLocation(event.location),
-                        full: event,
-                    })
+                    if(event.status !== "cancelled") {
+                        events.push({
+                            start: event.start.date || event.start.dateTime,
+                            end: event.end.date || event.end.dateTime,
+                            title: event.summary,
+                            location: extractGoogleCalLocation(event.location),
+                            full: event,
+                        })
+                    }
                 });
                 callback(events)
             } else {
