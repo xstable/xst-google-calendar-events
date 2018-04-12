@@ -33,7 +33,7 @@
     "eslint-config-react-tools": "^1.1.2",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "moment": "^2.20.1",
-    "react-google-calendar-events-list": "^0.2.0",
+    "react-google-calendar-events-list": "^1.0.0",
     "react-table": "^6.8.0",
     "style-loader": "^0.19.1"
   }
