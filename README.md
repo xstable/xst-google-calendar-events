@@ -3,8 +3,7 @@
 xst_google_events
 ===
 
-[![GitHub license](https://img.shields.io/github/license/xstable/xst_google_events.svg?style=for-the-badge)](https://github.com/xstable/xst_google_events/blob/master/LICENSE)
-[![GitHub Issues](https://img.shields.io/github/issues/xstable/xst_google_events.svg?style=for-the-badge)](https://github.com/xstable/xst_google_events/issues)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/xstable/xst_google_events)
 
 
 __fetch Google Calendar Entries via API into an sortable Event-List-Table at your Website__
