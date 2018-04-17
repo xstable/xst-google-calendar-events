@@ -51,7 +51,8 @@ Fully compatiple to following Browsers
 * Download the sources to your PC
 * Rename or copy `/sources/config.EXAMPLE.js` to `sources/config.js` and edit for your needs
 * Run `npm -i` on the root-path of the xst_googleEvents Directory
-* Run `webpack -p`
+* Run `webpack -p`. This will create the file _xst_googlecalendar.js__
+* Copy the file _xst_googlecalendar.xst_ to your Server and include it into your Webpage-Source-Code
 
 
 ## License
