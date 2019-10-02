@@ -17,8 +17,8 @@
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "superagent": "^3.8.2",
-    "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^3.11.0"
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
   },
   "babel": {
     "presets": [
@@ -27,7 +27,7 @@
     ]
   },
   "dependencies": {
-    "css-loader": "^0.28.10",
+    "css-loader": "^1.0.1",
     "date-fns": "^1.29.0",
     "envify": "^4.1.0",
     "eslint-config-react-tools": "^1.1.2",
