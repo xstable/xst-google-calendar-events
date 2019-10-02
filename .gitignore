@@ -57,3 +57,4 @@ typings/
 .next
 package-lock.json
 source/config.js
+dist
