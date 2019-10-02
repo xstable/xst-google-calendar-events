@@ -29,7 +29,7 @@ class App extends React.Component {
        Object.assign(ReactTableDefaults, {
           defaultPageSize: 10,
           minRows: 3,
-          previousText: 'zurück',
+          previousText: 'Zurück',
           nextText: 'Weiter',
           loadingText: 'Daten werden geladen...',
           noDataText: 'Momentan keine Veranstaltungen',
