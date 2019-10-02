@@ -1,24 +1,24 @@
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry:  './source/app.js',
     output: {
+        path: __dirname,
         filename: './example/js/xst_google_events.js'
     },
-    plugins: [
-        new UglifyJsPlugin({
-                parallel: 4
-            })
-    ],
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['react','es2015','stage-2']
-                }
+                use: [{
+                    loader: 'babel-loader',
+
+                    options: {
+                        presets: ['react','es2015','stage-2']
+                    }
+                }],
+                exclude: /node_modules/
             },
             {
                 test: /\.css$/,
@@ -29,5 +29,11 @@ module.exports = {
                 }],
             }
         ]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+                parallel: 4
+            })]
     }
 }
