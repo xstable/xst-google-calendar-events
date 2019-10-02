@@ -30,7 +30,7 @@ class App extends React.Component {
           defaultPageSize: 10,
           minRows: 3,
           previousText: 'zurück',
-          nextText: 'weiter',
+          nextText: 'Weiter',
           loadingText: 'Daten werden geladen...',
           noDataText: 'Momentan keine Veranstaltungen',
           pageText: 'Seite',
