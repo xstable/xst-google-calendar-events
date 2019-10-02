@@ -43,7 +43,7 @@ Fully compatiple to following Browsers
 
 
 ## Requirements
-- npm installed and working
+- yarn or npm installed and working
 - Calendar-ID of your Google Calendar. You'll find it in your Calendar-Settings: [How to get the Calender-ID](./xst_googleCalendar_getCalendar_id.mp4)
 - API_KEY - to access your Google-Calendar. Get it on https://console.developers.google.com : [How to create a Google-Calendar Api-Key](./How to create a Google Api Key.pdf)
 
