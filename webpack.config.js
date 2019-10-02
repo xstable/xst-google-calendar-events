@@ -1,9 +1,11 @@
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
+    mode: 'production',
     entry:  './source/app.js',
     mode: 'production',
     output: {
+        path: __dirname,
         filename: './example/js/xst_google_events.js'
     },
     optimization: {
@@ -29,5 +31,11 @@ module.exports = {
                 use: ['style-loader','css-loader'],
             }
         ]
+    },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+                parallel: 4
+            })]
     }
 }

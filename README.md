@@ -43,15 +43,17 @@ Fully compatiple to following Browsers
 
 
 ## Requirements
-- npm installed and working
+- yarn or npm installed and working
 - Calendar-ID of your Google Calendar. You'll find it in your Calendar-Settings: [How to get the Calender-ID](./xst_googleCalendar_getCalendar_id.mp4)
 - API_KEY - to access your Google-Calendar. Get it on https://console.developers.google.com : [How to create a Google-Calendar Api-Key](./How to create a Google Api Key.pdf)
 
 ## Installation
 * Download the sources to your PC
 * Rename or copy `/sources/config.EXAMPLE.js` to `sources/config.js` and edit for your needs
-* Run `npm -i` on the root-path of the xst_googleEvents Directory
-* Run `webpack -p`
+* Run `yarn install ` on the root-path of the xst_googleEvents Directory
+* Change API_KEY and CAL_ID (Calender-ID) in _/source/app.js_ to your personal credentials, you've got from your Google-Calendar
+* Run `webpack -p`. This will create the file _xst_googlecalendar.js__
+* Copy the file _xst_googlecalendar.xst_ to your Server and include it into your Webpage-Source-Code
 
 
 ## License
