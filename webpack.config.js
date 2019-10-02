@@ -3,30 +3,32 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry:  './source/app.js',
+    mode: 'production',
     output: {
         path: __dirname,
         filename: './example/js/xst_google_events.js'
     },
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin({
+            extractComments: true,
+        })],
+    },
     module: {
         rules: [
             {
-                test: /\.js$/,
-                use: [{
+                test: /\.m?js$/,
+                exclude: /(node_modules|bower_components)/,
+                use: {
                     loader: 'babel-loader',
-
                     options: {
-                        presets: ['react','es2015','stage-2']
+                        presets: ['@babel/preset-env']
                     }
-                }],
-                exclude: /node_modules/
+                }
             },
             {
-                test: /\.css$/,
-                use: [{
-                    loader: 'style-loader',
-                }, {
-                    loader: 'css-loader',
-                }],
+                test: /\.css$/i,
+                use: ['style-loader','css-loader'],
             }
         ]
     },

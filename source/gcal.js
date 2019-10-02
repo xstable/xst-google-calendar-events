@@ -4,6 +4,8 @@ const CURRENT_TIME = new Date(Date.now()).toISOString();
 import {CALENDAR_ID, API_KEY} from './config';
 
 const GOOGLE_CAL_URL = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}&timeMin=${CURRENT_TIME}`;
+// For Demo-Page show ALL Enties in the Calendar:
+// const GOOGLE_CAL_URL = `https://www.googleapis.com/calendar/v3/calendars/${CALENDAR_ID}/events?key=${API_KEY}`;
 
 function extractGoogleCalLocation(location) {
     const newLocation = [];
@@ -63,6 +65,7 @@ export function getEvents(callback) {
         .end((err, resp) => {
             if (!err) {
                 const events = [];
+                console.log("SASU:",JSON.parse(resp.text));
                 JSON.parse(resp.text).items.map((event) => {
                     if(event.status !== "cancelled") {
                         events.push({
