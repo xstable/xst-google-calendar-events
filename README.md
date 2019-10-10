@@ -1,6 +1,6 @@
 <img src="https://github.com/xstable/xst_google_events/raw/master/xst_googleEvents.svg?sanitize=true"  width="100%" height="144">
 
-xst_google_events
+xst-google-calendar-events
 ===
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge)](https://github.com/xstable/xst_google_events)
