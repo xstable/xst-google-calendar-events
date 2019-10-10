@@ -7,6 +7,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { ReactTableDefaults } from 'react-table'
 import ReactTable from 'react-table'
+import { withTranslation } from 'react-i18next'
+import i18n from './i18n'
 import 'react-table/react-table.css'
 import { getEvents } from './gcal'
 
@@ -27,17 +29,18 @@ const searchFilter = (filter, row, column, field) => {
 class App extends React.PureComponent {
   constructor (props) {
     super(props)
+    const { t } = this.props;
     // Init Table-Layout
     Object.assign(ReactTableDefaults, {
       defaultPageSize: 10,
       minRows: 3,
-      previousText: 'zurück',
-      nextText: 'weiter',
-      loadingText: 'Daten werden geladen...',
-      noDataText: 'Momentan keine Veranstaltungen',
-      pageText: 'Seite',
-      ofText: 'von',
-      rowsText: 'Reihen',
+      previousText: t('previousText'),
+      nextText: t('nextText'),
+      loadingText: t('loadingText'),
+      noDataText: t('noDataText'),
+      pageText: t('pageText'),
+      rowsText: t('rowsText'),
+      ofText: t('ofText'),
       className: '-striped -highlight',
       showPageJump: false,
       pageSizeOptions: [10, 25, 50, 100],
@@ -143,4 +146,8 @@ class App extends React.PureComponent {
   }
 }
 
-render(<App />, document.getElementById('xst_googleEvents'))
+const MyApp = withTranslation('common')(App)
+
+render(
+    <MyApp i18n={i18n}/>,
+  document.getElementById('xst_googleEvents'))

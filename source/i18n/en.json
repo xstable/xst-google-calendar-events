@@ -1,0 +1,9 @@
+{
+    "rowsText": "Rows",
+    "previousText": "Previous",
+    "nextText": "Next",
+    "loadingText": "Data is loading...",
+    "noDataText": "Currently no events",
+    "pageText": "Page",
+    "ofText": "of"
+}
