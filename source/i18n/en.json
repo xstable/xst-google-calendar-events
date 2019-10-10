@@ -9,6 +9,6 @@
     "date": "Date",
     "event": "Event",
     "postcode": "ZIP",
-    "place": "Adr",
+    "place": "Location",
     "noEntry": "No Calender Entries in this Calendar"
 }

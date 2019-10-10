@@ -132,7 +132,6 @@ class App extends React.PureComponent {
   }
 
   render () {
-    console.log(this.props.i18n);
     const { t } = this.props;
     if (this.state.events.length > 0) {
       return <ReactTable
