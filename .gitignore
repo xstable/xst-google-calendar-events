@@ -58,6 +58,3 @@ typings/
 package-lock.json
 source/config.js
 dist
-source/config.EXAMPLE.js
-yarn.lock
-source/config.EXAMPLE.js
