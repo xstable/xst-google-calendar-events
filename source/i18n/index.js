@@ -1,15 +1,17 @@
 import i18n from 'i18next';
+import detector from 'i18next-browser-languagedetector';
 import en from './en';
 import de from './de';
 
-i18n.init({
+i18n.use(detector)
+    .init({
     interpolation: { escapeValue: false },
     ns: ['common'],
     defaultNS: 'common',
-    lng: 'en',                              // language to use
+    fallbackLng: 'en',
     resources: {
         'en': {
-            common: en              // 'common' is our custom namespace
+            common: en
         },
         'de': {
             common: de

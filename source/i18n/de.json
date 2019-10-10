@@ -5,5 +5,10 @@
     "loadingText": "Daten werden geladen...",
     "noDataText": "Momentan keine Veranstaltungen",
     "pageText": "Seite",
-    "ofText": "von"
+    "ofText": "von",
+    "date": "Zeitpunkt",
+    "event": "Veranstaltung",
+    "postcode": "PLZ",
+    "place": "Ort",
+    "noEntry": "Keine Kalendereinträge in diesem Kalender"
 }

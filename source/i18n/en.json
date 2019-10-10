@@ -5,5 +5,10 @@
     "loadingText": "Data is loading...",
     "noDataText": "Currently no events",
     "pageText": "Page",
-    "ofText": "of"
+    "ofText": "of",
+    "date": "Date",
+    "event": "Event",
+    "postcode": "ZIP",
+    "place": "Adr",
+    "noEntry": "No Calender Entries in this Calendar"
 }

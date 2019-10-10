@@ -56,7 +56,7 @@ class App extends React.PureComponent {
       events: [],
       columns: [
         {
-          Header: 'Zeitpunkt',
+          Header: t('date'),
           accessor: 'start',
           width: 78,
           Cell: props => {
@@ -69,7 +69,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'Veranstaltung',
+          Header: t('event'),
           accessor: 'title', // String-based value accessors!
           Cell: props => <div title={props.value} >{props.value}</div >,
           filterMethod: (filter, row, column, field) => {
@@ -77,7 +77,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'PLZ',
+          Header: t('postcode'),
           accessor: 'location.zip',
           width: 50,
           Cell: props => {
@@ -90,7 +90,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'Ort',
+          Header: t('place'),
           accessor: 'location.city',
           width: 75,
           Cell: props => {
@@ -132,6 +132,8 @@ class App extends React.PureComponent {
   }
 
   render () {
+    console.log(this.props.i18n);
+    const { t } = this.props;
     if (this.state.events.length > 0) {
       return <ReactTable
         data={this.state.events}
@@ -142,7 +144,7 @@ class App extends React.PureComponent {
                       dangerouslySetInnerHTML={{__html: row.original.full.description}} />
         }
       />
-    } else return <div ><p >No Calender-Entries in this Calendar</p ></div >
+    } else return <div ><p>{t("noEntry")}</p ></div >
   }
 }
 

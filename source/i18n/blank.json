@@ -5,5 +5,10 @@
     "loadingText": "",
     "noDataText": "",
     "pageText": "",
-    "ofText": ""
+    "ofText": "",
+    "date": "",
+    "event": "",
+    "postcode": "",
+    "place": "",
+    "noEntry": ""
 }
