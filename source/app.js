@@ -7,6 +7,8 @@ import React from 'react'
 import { render } from 'react-dom'
 import { ReactTableDefaults } from 'react-table'
 import ReactTable from 'react-table'
+import { withTranslation } from 'react-i18next'
+import i18n from './i18n'
 import 'react-table/react-table.css'
 import { getEvents } from './gcal'
 
@@ -27,17 +29,18 @@ const searchFilter = (filter, row, column, field) => {
 class App extends React.PureComponent {
   constructor (props) {
     super(props)
+    const { t } = this.props;
     // Init Table-Layout
     Object.assign(ReactTableDefaults, {
       defaultPageSize: 10,
       minRows: 3,
-      previousText: 'zurück',
-      nextText: 'weiter',
-      loadingText: 'Daten werden geladen...',
-      noDataText: 'Momentan keine Veranstaltungen',
-      pageText: 'Seite',
-      ofText: 'von',
-      rowsText: 'Reihen',
+      previousText: t('previousText'),
+      nextText: t('nextText'),
+      loadingText: t('loadingText'),
+      noDataText: t('noDataText'),
+      pageText: t('pageText'),
+      rowsText: t('rowsText'),
+      ofText: t('ofText'),
       className: '-striped -highlight',
       showPageJump: false,
       pageSizeOptions: [10, 25, 50, 100],
@@ -53,7 +56,7 @@ class App extends React.PureComponent {
       events: [],
       columns: [
         {
-          Header: 'Zeitpunkt',
+          Header: t('date'),
           accessor: 'start',
           width: 78,
           Cell: props => {
@@ -66,7 +69,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'Veranstaltung',
+          Header: t('event'),
           accessor: 'title', // String-based value accessors!
           Cell: props => <div title={props.value} >{props.value}</div >,
           filterMethod: (filter, row, column, field) => {
@@ -74,7 +77,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'PLZ',
+          Header: t('postcode'),
           accessor: 'location.zip',
           width: 50,
           Cell: props => {
@@ -87,7 +90,7 @@ class App extends React.PureComponent {
           },
         },
         {
-          Header: 'Ort',
+          Header: t('place'),
           accessor: 'location.city',
           width: 75,
           Cell: props => {
@@ -129,6 +132,7 @@ class App extends React.PureComponent {
   }
 
   render () {
+    const { t } = this.props;
     if (this.state.events.length > 0) {
       return <ReactTable
         data={this.state.events}
@@ -139,8 +143,12 @@ class App extends React.PureComponent {
                       dangerouslySetInnerHTML={{__html: row.original.full.description}} />
         }
       />
-    } else return <div ><p >No Calender-Entries in this Calendar</p ></div >
+    } else return <div ><p>{t("noEntry")}</p ></div >
   }
 }
 
-render(<App />, document.getElementById('xst_googleEvents'))
+const MyApp = withTranslation('common')(App)
+
+render(
+    <MyApp i18n={i18n}/>,
+  document.getElementById('xst_googleEvents'))
