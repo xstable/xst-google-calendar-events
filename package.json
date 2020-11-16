@@ -47,7 +47,7 @@
     "@babel/polyfill": "^7.6.0",
     "css-loader": "^3.2.0",
     "envify": "^4.1.0",
-    "i18next": "^17.1.0",
+    "i18next": "^19.6.0",
     "i18next-browser-languagedetector": "^4.0.0",
     "moment": "^2.20.1",
     "prop-types": "^15.7.2",
